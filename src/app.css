@@ -75,24 +75,15 @@ html {
     }
 }
 
-
 .tiles {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.tiles .tile {
-    background: #ffd560;
-    width: calc((100% - 15px) / 2);
-}
-
-.tiles .tile:nth-child(n+3) {
-    margin-top: 15px;
+    display: grid;
+    grid: auto-flow dense / repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 15px;
 }
 
 
 .tile {
+    background: #ffd560;
 }
 
 .tile::before {
