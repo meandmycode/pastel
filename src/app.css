@@ -1,0 +1,103 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+html, body .shell {
+    height: 100%;
+}
+
+html {
+    font-family: sans-serif;
+    background: #1200B2 linear-gradient(35deg, #4c3d9a, #615aa7);
+    color: #f2f2f2;
+}
+
+
+.shell {
+    display: flex;
+    flex-flow: column;
+}
+
+.shell .appbar {
+    background: #f17a8d;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.shell .view {
+    flex: auto;
+}
+
+
+.appbar {
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+.swenk-view {
+    margin: 15px;
+}
+
+.loader {
+    display: inline-flex;
+    margin: 0 auto 20px;/* what */
+}
+
+.loader svg {
+    display: block;
+}
+
+.loader polyline {
+    fill: none;
+    stroke: currentColor;
+    stroke-dasharray: 343 343;
+    stroke-width: 5;
+    animation: loader-strokes 2s infinite;
+}
+
+@keyframes loader-strokes {
+    
+    50% {
+        stroke-dashoffset: 343;
+    }
+
+    100% {
+        stroke-dashoffset: 686;
+    }
+}
+
+
+.tiles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.tiles .tile {
+    background: #ffd560;
+    width: calc((100% - 15px) / 2);
+}
+
+.tiles .tile:nth-child(n+3) {
+    margin-top: 15px;
+}
+
+
+.tile {
+}
+
+.tile::before {
+    content: '';
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+}
