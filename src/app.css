@@ -22,7 +22,7 @@ html {
 
 .shell .appbar {
     background: #f17a8d;
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #524a8a;
 }
 
 .shell .view {
